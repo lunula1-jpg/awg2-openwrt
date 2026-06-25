@@ -13,12 +13,10 @@ jobs:
       matrix:
         build_env:
           - tag: "24.10.4"
-            pkgarch: mips_24kc
-            target: ramips
-            subtarget: mt76x8
-            vermagic: "7b067dbe1210780507b9fd888c130426"
-          
-
+            pkgarch: aarch64_cortex-a53
+            target: mediatek
+            subtarget: filogic
+            vermagic: "9469a6c8c449c47e503c05678ea1559d-r1"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -115,4 +113,3 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: awgrelease/*.ipk
-
